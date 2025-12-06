@@ -20,7 +20,7 @@ namespace pokeAPI
 
             Console.WriteLine($"\nBuscando Pokemon {type} ...");
             var result = await SearchByTypeAsync(type);
-            Console.WriteLine($"\nLista de resultados para '{type}':");
+            
             if (result == null)
             {
                 Console.WriteLine($"Error al obtener o parsear los datos de la API.");
@@ -33,6 +33,7 @@ namespace pokeAPI
                 PrintWaitForPressKey();
                 return;
             }
+            Console.WriteLine($"\nLista de pokemones para el tipo '{type}':");
             PrintPokemonsList(result);
             PrintWaitForPressKey();
         } // End of RequestSearchByName
