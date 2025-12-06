@@ -1,0 +1,242 @@
+[
+    {
+        "id": 1,
+        "name": "Bulbasaur",
+        "type": ["Planta", "Veneno"],
+        "height": 0.7,
+        "mass": 6.9,
+        "moves": ["SolarBeam", "Sludge"]
+    },
+    {
+        "id": 2,
+        "name": "Ivysaur",
+        "type": ["Planta", "Veneno"],
+        "height": 1.0,
+        "mass": 13.0,
+        "moves": ["SolarBeam", "Sludge"]
+    },
+    {
+        "id": 3,
+        "name": "Venusaur",
+        "type": ["Planta", "Veneno"],
+        "height": 2.0,
+        "mass": 100.0,
+        "moves": ["SolarBeam", "Sludge"]
+    },
+    {
+        "id": 4,
+        "name": "Charmander",
+        "type": ["Fuego"],
+        "height": 0.6,
+        "mass": 8.5,
+        "moves": ["Fire Blast", "Flamethrower"]
+    },
+    {
+        "id": 5,
+        "name": "Charmeleon",
+        "type": ["Fuego"],
+        "height": 1.1,
+        "mass": 19.0,
+        "moves": ["Fire Blast", "Flamethrower"]
+    },
+    {
+        "id": 6,
+        "name": "Charizard",
+        "type": ["Fuego", "Volador"],
+        "height": 1.7,
+        "mass": 90.5,
+        "moves": ["Fire Blast", "Sky Attack"]
+    },
+    {
+        "id": 7,
+        "name": "Squirtle",
+        "type": ["Agua"],
+        "height": 0.5,
+        "mass": 9.0,
+        "moves": ["Hydro Pump", "Bubble"]
+    },
+    {
+        "id": 8,
+        "name": "Wartortle",
+        "type": ["Agua"],
+        "height": 1.0,
+        "mass": 22.5,
+        "moves": ["Hydro Pump", "Skull Bash"]
+    },
+    {
+        "id": 9,
+        "name": "Blastoise",
+        "type": ["Agua"],
+        "height": 1.6,
+        "mass": 85.5,
+        "moves": ["Hydro Pump", "Skull Bash"]
+    },
+    {
+        "id": 10,
+        "name": "Pikachu",
+        "type": ["Eléctrico"],
+        "height": 0.4,
+        "mass": 6.0,
+        "moves": ["Thunder", "Fast Attack"]
+    },
+    {
+        "id": 11,
+        "name": "Raichu",
+        "type": ["Eléctrico"],
+        "height": 0.8,
+        "mass": 30.0,
+        "moves": ["Thunder", "Fast Attack"]
+    },
+    {
+        "id": 12,
+        "name": "Gastly",
+        "type": ["Fantasma", "Veneno"],
+        "height": 1.3,
+        "mass": 0.1,
+        "moves": ["Poison Gas", "Hide"]
+    },
+    {
+        "id": 13,
+        "name": "Haunter",
+        "type": ["Fantasma", "Veneno"],
+        "height": 1.6,
+        "mass": 0.1,
+        "moves": ["Night Shade", "Sludge"]
+    },
+    {
+        "id": 14,
+        "name": "Gengar",
+        "type": ["Fantasma", "Veneno"],
+        "height": 1.5,
+        "mass": 40.5,
+        "moves": ["Night Shade", "Poison Gas"]
+    },
+    {
+        "id": 15,
+        "name": "Meowth",
+        "type": ["Normal"],
+        "height": 0.4,
+        "mass": 4.2,
+        "moves": ["Scratch", "Bite"]
+    },
+    {
+        "id": 16,
+        "name": "Abra",
+        "type": ["Psíquico"],
+        "height": 0.9,
+        "mass": 19.5,
+        "moves": ["Recover", "Teleport"]
+    },
+    {
+        "id": 17,
+        "name": "Kadabra",
+        "type": ["Psíquico"],
+        "height": 1.3,
+        "mass": 56.5,
+        "moves": ["Psychic", "Recover"]
+    },
+    {
+        "id": 18,
+        "name": "Alakazam",
+        "type": ["Psíquico"],
+        "height": 1.5,
+        "mass": 48.0,
+        "moves": ["Psychic", "Confusion"]
+    },
+    {
+        "id": 19,
+        "name": "Magikarp",
+        "type": ["Agua"],
+        "height": 0.9,
+        "mass": 10.0,
+        "moves": ["Splash", "Tackle"]
+    },
+    {
+        "id": 20,
+        "name": "Gyarados",
+        "type": ["Agua", "Volador"],
+        "height": 6.5,
+        "mass": 235.0,
+        "moves": ["Hydro Pump", "Hyper Beam"]
+    },
+    {
+        "id": 21,
+        "name": "Articuno",
+        "type": ["Hielo", "Volador"],
+        "height": 1.7,
+        "mass": 55.4,
+        "moves": ["Blizzard", "Sky Attack"]
+    },
+    {
+        "id": 22,
+        "name": "Zapdos",
+        "type": ["Eléctrico", "Volador"],
+        "height": 1.6,
+        "mass": 52.6,
+        "moves": ["Thunder", "Sky Attack"]
+    },
+    {
+        "id": 23,
+        "name": "Moltres",
+        "type": ["Fuego", "Volador"],
+        "height": 2.0,
+        "mass": 60.0,
+        "moves": ["Fire Blast", "Sky Attack"]
+    },
+    {
+        "id": 24,
+        "name": "Mewtwo",
+        "type": ["Psíquico"],
+        "height": 2.0,
+        "mass": 122.0,
+        "moves": ["Psychic", "Recover"]
+    },
+    {
+        "id": 25,
+        "name": "Mew",
+        "type": ["Psíquico"],
+        "height": 0.4,
+        "mass": 4.0,
+        "moves": ["Psychic", "Recover"]
+    },
+    {
+        "id": 26,
+        "name": "Lugia",
+        "type": ["Psíquico", "Volador"],
+        "height": 5.2,
+        "mass": 216.0,
+        "moves": ["Psychic", "Sky Attack"]
+    },
+    {
+        "id": 27,
+        "name": "Pidgey",
+        "type": ["Normal", "Volador"],
+        "height": 0.3,
+        "mass": 1.8,
+        "moves": ["Hyper Beam", "Fly"]
+    },
+    {
+        "id": 28,
+        "name": "Pidgeotto",
+        "type": ["Normal", "Volador"],
+        "height": 1.1,
+        "mass": 30.0,
+        "moves": ["Hyper Beam", "Sky Attack"]
+    },
+    {
+        "id": 29,
+        "name": "Pidgeot",
+        "type": ["Normal", "Volador"],
+        "height": 1.5,
+        "mass": 39.5,
+        "moves": ["Hyper Beam", "Sky Attack"]
+    },
+    {
+        "id": 30,
+        "name": "Ditto",
+        "type": ["Normal"],
+        "height": 0.3,
+        "mass": 4.0,
+        "moves": ["Confusion", "Transform"]
+    }
+]

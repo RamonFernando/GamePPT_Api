@@ -1,0 +1,29 @@
+[
+  {
+    "id": 30,
+    "name": "Ditto",
+    "type": [
+      "Normal"
+    ],
+    "height": 0.3,
+    "mass": 4,
+    "moves": [
+      "Confusion",
+      "Transform"
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Lugia",
+    "type": [
+      "Ps\u00EDquico",
+      "Volador"
+    ],
+    "height": 5.2,
+    "mass": 216,
+    "moves": [
+      "Psychic",
+      "Sky Attack"
+    ]
+  }
+]
