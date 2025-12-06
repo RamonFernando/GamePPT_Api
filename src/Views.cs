@@ -102,14 +102,14 @@ namespace pokeAPI
                 PrintWaitForPressKey();
                 return;
             }
-            int count = 1;
             Console.WriteLine($"\nLista de Pokemons Favoritos: {pokemonsFavoriteList.Count}");
             Console.WriteLine("=========================================");
             
-            foreach (var pokemon in pokemonsFavoriteList)
+            for (int i = 0; i < pokemonsFavoriteList.Count; i++)
             {
+                var pokemon = pokemonsFavoriteList[i];
                 Console.WriteLine(
-                $"\n{count}º Pokemon: " +
+                $"\n{i+1}º Pokemon: " +
                 $"\n--------------------------" +
                 $"\nId: {pokemon.Id}" +
                 $"\nNombre: {pokemon.Name}" +
@@ -118,7 +118,6 @@ namespace pokeAPI
                 $"\nPeso: {pokemon.Mass} Kg" +
                 $"\nMovimientos: {string.Join(", ", pokemon.Moves)}"
                 );
-                count++;
             }
             PrintWaitForPressKey();
         }

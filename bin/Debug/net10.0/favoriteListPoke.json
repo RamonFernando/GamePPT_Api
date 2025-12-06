@@ -25,5 +25,18 @@
       "Psychic",
       "Sky Attack"
     ]
+  },
+  {
+    "id": 10,
+    "name": "Pikachu",
+    "type": [
+      "El\u00E9ctrico"
+    ],
+    "height": 0.4,
+    "mass": 6,
+    "moves": [
+      "Thunder",
+      "Fast Attack"
+    ]
   }
 ]

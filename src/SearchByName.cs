@@ -36,7 +36,7 @@ namespace pokeAPI
             }
 
             PrintPokemonsList(result);
-            Console.Write("\n¿Desea agregar a la lista de favoritos? (S/N): ");
+            Console.Write($"\n¿Deseas agregar a '{result[0].Name}' a la lista de favoritos? (S/N): ");
             string? opc = Console.ReadLine();
             opc = opc?.Trim().ToLower();
             

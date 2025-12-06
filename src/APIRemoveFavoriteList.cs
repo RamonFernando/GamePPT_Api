@@ -13,31 +13,35 @@ namespace pokeAPI
 
         public static void RequestRemoveFavoriteList()
         {
-            Console.WriteLine("Introduce el id del pokemon a borrar: ");
-            string? input = Console.ReadLine();
-            int id = ValidateInput(input);
-            if (id == -1 || id <= 0)
+            if (pokemonsFavoriteList.Count == 0)
             {
-                Console.WriteLine("Id no valido o inexistente.");
+                Console.WriteLine("No hay Pokemons en la lista de favoritos.");
                 PrintWaitForPressKey();
                 return;
             }
-            Console.Write($"\nEstas seguro que deseas borrar el pokemon con Id: '{id}' de la lista de favoritos? (S/N): ");
-            string? opc = Console.ReadLine();
-            opc = opc?.Trim().ToLower();
+            Console.Write("Introduce el Indice del pokemon a borrar: ");
+            int index = ValidateInput(Console.ReadLine()) -1;
+            if (index < 0 || index >= pokemonsFavoriteList.Count())
+            {
+                Console.WriteLine("Indice no valido o inexistente.");
+                PrintWaitForPressKey();
+                return;
+            }
+            Console.Write($"\nEstas seguro que deseas borrar el pokemon con Indice: {index+1} '{pokemonsFavoriteList[index].Name}' de la lista de favoritos? (S/N): ");
+            string? opc = Console.ReadLine()?.Trim().ToLower();
             
             if(string.IsNullOrWhiteSpace(opc) || opc != "s")
             {
-                Console.WriteLine($"Pokemon con ID {id} no borrado de la lista de favoritos.");
+                Console.WriteLine($"Pokemon {index+1}: {pokemonsFavoriteList[index].Name} no se ha borrado de la lista de favoritos.");
                 PrintWaitForPressKey();
                 return;
             }
-            RemoveFavoriteList(id);
+            RemoveFavoriteList(index);
             APISaveFavoriteList();
             PrintWaitForPressKey();
         }
 
-        private static void RemoveFavoriteList(int id)
+        private static void RemoveFavoriteList(int index)
         {
             if (pokemonsFavoriteList.Count == 0)
             {
@@ -45,15 +49,15 @@ namespace pokeAPI
                 PrintWaitForPressKey();
                 return;
             }
-            if (!pokemonsFavoriteList.Any(pkm => pkm != null && pkm.Id == id))
+            if (index < 0 || index >= pokemonsFavoriteList.Count())
             {
-                Console.WriteLine($"No se encontro ningun Pokemon con el ID: {id}.");
+                Console.WriteLine($"No se encontro ningun Pokemon con el Indice: {index}.");
                 PrintWaitForPressKey();
                 return;
             }
-            pokemonsFavoriteList.RemoveAll(pkm => pkm != null && pkm.Id == id);
-            Console.WriteLine($"Pokemon con ID {id} borrado de la lista de favoritos.");
-            PrintWaitForPressKey();
+            var pokemon = pokemonsFavoriteList[index];
+            pokemonsFavoriteList.RemoveAt(index);
+            Console.WriteLine($"Pokemon con Indice {index+1} '{pokemon.Name}' borrado de la lista de favoritos.");
             return;
         }
     }

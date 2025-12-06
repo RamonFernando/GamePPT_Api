@@ -22,8 +22,7 @@ namespace pokeAPI
 
                 File.WriteAllText(filePath, json);
                 // Console.WriteLine("Operacion realizada con exito");
-
-                Console.WriteLine(json);
+                // Console.WriteLine(json);
 
             }
             catch (Exception ex)

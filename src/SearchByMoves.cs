@@ -14,9 +14,14 @@ namespace pokeAPI
     {
         public static async Task RequestSearchByMoves()
         {
-            Console.WriteLine("Introduce el movimiento del pokemon a buscar: ");
+            Console.Write("Introduce el movimiento del pokemon a buscar: ");
             string? moves = Console.ReadLine();
-            
+            if (moves == null || moves.Trim() == "")
+            {
+                Console.WriteLine("Entrada no valida o movimiento inexistente.");
+                PrintWaitForPressKey();
+                return;
+            }
             Console.WriteLine($"Buscando movimiento: {moves}");
             var result = await SearchByMovesAsync(moves);
 
@@ -59,7 +64,7 @@ namespace pokeAPI
             
             // 3. Busqueda del Pokemon por movimientos
             var filteredPokemons = pokemonList?
-                .Where(pkm => pkm.Moves != null && pkm.Moves[0].Contains(moves ?? "", StringComparison.OrdinalIgnoreCase)
+                .Where(pkm => pkm.Moves != null && pkm.Moves.Any(mv => mv.Contains(moves ?? "", StringComparison.OrdinalIgnoreCase)) // busqueda parcial y case insensitive
                 ).ToList();
             
             // 4. Mostramos el resultado
