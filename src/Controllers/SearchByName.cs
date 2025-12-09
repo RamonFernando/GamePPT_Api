@@ -56,7 +56,7 @@ namespace pokeAPI
         public static async Task<List<Pokemon>?> SearchByNameAsync(string? name)
         {
             var url = $"{BASE_URL}";
-
+            
             // 1. Peticion HTTP y validacion de respuesta
             HttpResponseMessage response = await client.GetAsync(url);
             if (!response.IsSuccessStatusCode)
