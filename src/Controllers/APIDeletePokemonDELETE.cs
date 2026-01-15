@@ -1,13 +1,5 @@
-using System.Net.Http;
-using System.Threading.Tasks;
-using System.Text.Json;
-using static pokeAPI.Program;
-using static pokeAPI.Views;
-using static pokeAPI.SearchById;
-using static pokeAPI.APIControllers;
-using static pokeAPI.HttpClientService;
 
-namespace pokeAPI
+namespace GamePPT_Api
 {
     public class APIDeletePokemonDELETE
     {
@@ -37,7 +29,7 @@ namespace pokeAPI
             }
 
             // 2. Mostrar Pokémon encontrado
-            PrintPokemon(pokemon);
+            // PrintPokemon(pokemon);
 
             // 3. Confirmación
             Console.Write("\n¿Seguro que deseas eliminar este Pokemon? (s/n): ");

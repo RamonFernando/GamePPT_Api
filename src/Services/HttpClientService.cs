@@ -1,5 +1,5 @@
 
-namespace pokeAPI
+namespace GamePPT_Api
 {
     internal class HttpClientService
     {

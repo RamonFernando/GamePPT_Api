@@ -1,6 +1,6 @@
 using System.Globalization;
 
-namespace pokeAPI
+namespace GamePPT_Api
 {
     internal class APIControllers
     {

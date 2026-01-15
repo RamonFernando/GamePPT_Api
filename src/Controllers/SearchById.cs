@@ -1,16 +1,5 @@
-using System.Text.Json;
-using System.Net;
 
-using static pokeAPI.Pokemon;
-using static pokeAPI.APIControllers;
-using static pokeAPI.Program;
-using static pokeAPI.Views;
-using static pokeAPI.HttpClientService;
-
-
-
-
-namespace pokeAPI
+namespace GamePPT_Api
 {
     internal class SearchById
     {
@@ -34,7 +23,7 @@ namespace pokeAPI
                 return;
             }
 
-            PrintPokemon(pokemon);
+            // PrintPokemon(pokemon);
             PrintWaitForPressKey();
         } // End of RequestSearchById
 

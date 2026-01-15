@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ramon\\Ramon Dropbox\\Ramon Perez\\PC\\Desktop\\PokeAPI\\pokeAPI\\pokeAPI.csproj": {}
+    "C:\\Users\\Ramon\\Ramon Dropbox\\Ramon Perez\\PC\\Desktop\\Juego Pokemon\\pokeAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ramon\\Ramon Dropbox\\Ramon Perez\\PC\\Desktop\\PokeAPI\\pokeAPI\\pokeAPI.csproj": {
+    "C:\\Users\\Ramon\\Ramon Dropbox\\Ramon Perez\\PC\\Desktop\\Juego Pokemon\\pokeAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ramon\\Ramon Dropbox\\Ramon Perez\\PC\\Desktop\\PokeAPI\\pokeAPI\\pokeAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Ramon\\Ramon Dropbox\\Ramon Perez\\PC\\Desktop\\Juego Pokemon\\pokeAPI.csproj",
         "projectName": "pokeAPI",
-        "projectPath": "C:\\Users\\Ramon\\Ramon Dropbox\\Ramon Perez\\PC\\Desktop\\PokeAPI\\pokeAPI\\pokeAPI.csproj",
+        "projectPath": "C:\\Users\\Ramon\\Ramon Dropbox\\Ramon Perez\\PC\\Desktop\\Juego Pokemon\\pokeAPI.csproj",
         "packagesPath": "C:\\Users\\Ramon\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ramon\\Ramon Dropbox\\Ramon Perez\\PC\\Desktop\\PokeAPI\\pokeAPI\\obj\\",
+        "outputPath": "C:\\Users\\Ramon\\Ramon Dropbox\\Ramon Perez\\PC\\Desktop\\Juego Pokemon\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -65,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",

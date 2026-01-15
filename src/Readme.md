@@ -1,4 +1,4 @@
-# PokeAPI — Proyecto Full-Stack (Node.js + C#)
+# GamePPT_Api — Proyecto Full-Stack (Node.js + C#)
 
 Este proyecto combina una **API creada con Node.js** y una **aplicación de consola en C#** que consume dicha API.
 Permite realizar búsquedas de Pokémon, filtrarlos por nombre, tipo, movimientos, ID,
@@ -26,7 +26,7 @@ Para ejecutar el proyecto correctamente es necesario usar **dos consolas de form
 1. Abre una consola y navega a:
 
 C:\Users\Ramon\Ramon Dropbox\Ramon Perez\PC\Desktop\PokeAPI\pokeAPI\src\api>
-2. Ejecuta: node pokeAPI.js
+2. Ejecuta: node GamePPT_Api.js
 3. Si todo está funcionando, aparecerá:
 Servidor escuchando en http://localhost:4000/pokemons
 La API ya está disponible y lista para que la aplicación en C# realice peticiones HTTP.
@@ -69,8 +69,8 @@ La aplicación se iniciará, mostrará el menú principal por consola y comenzar
 pokeAPI/
 │
 ├── Program.cs
-├── pokeAPI.csproj
-├── pokeAPI.sln
+├── GamePPT_Api.csproj
+├── GamePPT_Api.sln
 │
 ├── .vscode/
 │   └── settings.json
@@ -102,13 +102,7 @@ pokeAPI/
 │   ├── Services/
 │   │   ├── APILoadJson.cs
 │   │   ├── APISaveJson.cs
-│   │   ├── HttpClientService.cs
-│   │   ├── SearchByHeight.cs
-│   │   ├── SearchById.cs
-│   │   ├── SearchByMass.cs
-│   │   ├── SearchByMoves.cs
-│   │   ├── SearchByName.cs
-│   │   └── SearchByType.cs
+│   │   └── HttpClientService.cs
 │   │
 │   └── Views/
 │       ├── GetRequestAPI.cs

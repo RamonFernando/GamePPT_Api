@@ -1,12 +1,12 @@
 
 using System.Text.Json;
-using static pokeAPI.Program;
-using static pokeAPI.APIControllers;
-using static pokeAPI.HttpClientService;
-using static pokeAPI.Views;
+using static GamePPT_Api.Program;
+using static GamePPT_Api.APIControllers;
+using static GamePPT_Api.HttpClientService;
+using static GamePPT_Api.Views;
 
 
-namespace pokeAPI
+namespace GamePPT_Api
 {
     internal class GetRequestAPI
     {
@@ -21,9 +21,9 @@ namespace pokeAPI
             }
 
             string json = response.Content.ReadAsStringAsync().Result;
-            var pokeAPI = JsonDocument.Parse(json).RootElement;
+            var GamePPT_Api = JsonDocument.Parse(json).RootElement;
 
-            foreach (var pokemon in pokeAPI.EnumerateArray())
+            foreach (var pokemon in GamePPT_Api.EnumerateArray())
             {
                 Console.WriteLine(
                     $"\nID: {pokemon.GetProperty("id").GetInt32()}" +

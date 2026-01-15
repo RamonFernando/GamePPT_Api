@@ -3,6 +3,22 @@
   "WorkspaceRootPath": "C:\\Users\\Ramon\\Ramon Dropbox\\Ramon Perez\\PC\\Desktop\\PokeAPI\\pokeAPI\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ramon\\Ramon Dropbox\\Ramon Perez\\PC\\Desktop\\PokeAPI\\pokeAPI\\src\\Services\\APILoadJson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\Services\\APILoadJson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ramon\\Ramon Dropbox\\Ramon Perez\\PC\\Desktop\\PokeAPI\\pokeAPI\\src\\Services\\APISaveJson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\Services\\APISaveJson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ramon\\Ramon Dropbox\\Ramon Perez\\PC\\Desktop\\PokeAPI\\pokeAPI\\src\\Controllers\\SearchByName.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\Controllers\\SearchByName.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ramon\\Ramon Dropbox\\Ramon Perez\\PC\\Desktop\\PokeAPI\\pokeAPI\\src\\Controllers\\SearchById.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\Controllers\\SearchById.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ramon\\Ramon Dropbox\\Ramon Perez\\PC\\Desktop\\PokeAPI\\pokeAPI\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -14,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,7 +38,58 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "APISaveJson.cs",
+              "DocumentMoniker": "C:\\Users\\Ramon\\Ramon Dropbox\\Ramon Perez\\PC\\Desktop\\PokeAPI\\pokeAPI\\src\\Services\\APISaveJson.cs",
+              "RelativeDocumentMoniker": "src\\Services\\APISaveJson.cs",
+              "ToolTip": "C:\\Users\\Ramon\\Ramon Dropbox\\Ramon Perez\\PC\\Desktop\\PokeAPI\\pokeAPI\\src\\Services\\APISaveJson.cs",
+              "RelativeToolTip": "src\\Services\\APISaveJson.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T23:25:24.827Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "APILoadJson.cs",
+              "DocumentMoniker": "C:\\Users\\Ramon\\Ramon Dropbox\\Ramon Perez\\PC\\Desktop\\PokeAPI\\pokeAPI\\src\\Services\\APILoadJson.cs",
+              "RelativeDocumentMoniker": "src\\Services\\APILoadJson.cs",
+              "ToolTip": "C:\\Users\\Ramon\\Ramon Dropbox\\Ramon Perez\\PC\\Desktop\\PokeAPI\\pokeAPI\\src\\Services\\APILoadJson.cs",
+              "RelativeToolTip": "src\\Services\\APILoadJson.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB0AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T23:25:23.954Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SearchByName.cs",
+              "DocumentMoniker": "C:\\Users\\Ramon\\Ramon Dropbox\\Ramon Perez\\PC\\Desktop\\PokeAPI\\pokeAPI\\src\\Controllers\\SearchByName.cs",
+              "RelativeDocumentMoniker": "src\\Controllers\\SearchByName.cs",
+              "ToolTip": "C:\\Users\\Ramon\\Ramon Dropbox\\Ramon Perez\\PC\\Desktop\\PokeAPI\\pokeAPI\\src\\Controllers\\SearchByName.cs",
+              "RelativeToolTip": "src\\Controllers\\SearchByName.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAADkAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T22:16:17.889Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SearchById.cs",
+              "DocumentMoniker": "C:\\Users\\Ramon\\Ramon Dropbox\\Ramon Perez\\PC\\Desktop\\PokeAPI\\pokeAPI\\src\\Controllers\\SearchById.cs",
+              "RelativeDocumentMoniker": "src\\Controllers\\SearchById.cs",
+              "ToolTip": "C:\\Users\\Ramon\\Ramon Dropbox\\Ramon Perez\\PC\\Desktop\\PokeAPI\\pokeAPI\\src\\Controllers\\SearchById.cs",
+              "RelativeToolTip": "src\\Controllers\\SearchById.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T22:15:43.173Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Ramon\\Ramon Dropbox\\Ramon Perez\\PC\\Desktop\\PokeAPI\\pokeAPI\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -30,8 +97,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-04T17:13:24.896Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-04T17:13:24.896Z"
             }
           ]
         }
