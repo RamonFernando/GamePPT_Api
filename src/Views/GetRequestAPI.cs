@@ -1,9 +1,8 @@
-
-using System.Text.Json;
-using static GamePPT_Api.Program;
-using static GamePPT_Api.APIControllers;
-using static GamePPT_Api.HttpClientService;
-using static GamePPT_Api.Views;
+/*
+ShowLoadingPokemons()
+ShowApiSuccess()
+ShowApiError()
+ */
 
 
 namespace GamePPT_Api

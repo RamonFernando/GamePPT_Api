@@ -3,54 +3,63 @@
         "id": 1,
         "name": "Bulbasaur",
         "type": "Planta",
-        "lives": 4
+        "lives": 4,
+        "hability": "Drenaje natural"
     },
     {
         "id": 2,
         "name": "Ivysaur",
         "type": "Planta",
-        "lives": 4
+        "lives": 4,
+        "hability": "Raíces protectoras"
     },
     {
         "id": 3,
         "name": "Venusaur",
         "type": "Planta",
-        "lives": 4
+        "lives": 4,
+        "hability": "Fotosíntesis"
     },
     {
         "id": 4,
         "name": "Charmander",
         "type": "Fuego",
-        "lives": 4
+        "lives": 4,
+        "hability": "Llama creciente"
     },
     {
         "id": 5,
         "name": "Charmeleon",
         "type": "Fuego",
-        "lives": 4
+        "lives": 4,
+        "hability": "Ira ardiente"
     },
     {
         "id": 6,
         "name": "Charizard",
         "type": "Fuego",
-        "lives": 4
+        "lives": 4,
+        "hability": "Vuelo ígneo"
     },
     {
         "id": 7,
         "name": "Squirtle",
         "type": "Agua",
-        "lives": 5
+        "lives": 5,
+        "hability": "Caparazón húmedo"
     },
     {
         "id": 8,
         "name": "Wartortle",
         "type": "Agua",
-        "lives": 5
+        "lives": 5,
+        "hability": "Defensa acuática"
     },
     {
         "id": 9,
         "name": "Blastoise",
         "type": "Agua",
-        "lives": 5
+        "lives": 5,
+        "hability": "Cañones de agua"
     }
 ]

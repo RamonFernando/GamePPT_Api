@@ -1,8 +1,13 @@
+/*
+IsValidMenuOption(int option)
+IsValidPokemonId(int id)
+*/
+
 using System.Globalization;
 
 namespace GamePPT_Api
 {
-    internal class APIControllers
+    internal class APIValidatorInputs
     {
         public static int ValidateInput(string? input)
         {

@@ -1,11 +1,14 @@
-
+/*
+Handle(Exception ex)
+HandleApiException(Exception ex)
+*/
 
 namespace GamePPT_Api
 {
     public class HandlerExceptions
     {
         // Manejo de excepciones
-        public static void HandlerExceptionsMessage(Exception ex)
+        public static void HandlerApiException(Exception ex)
         {
             if (ex is HttpRequestException HttpEx)
             {

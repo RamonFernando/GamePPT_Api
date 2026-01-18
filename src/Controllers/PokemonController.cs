@@ -1,6 +1,6 @@
 namespace GamePPT_Api
 {
-    public class PokemonController
+    public static class PokemonController
     {
         public static Pokemon? SelectPokemon(List<Pokemon> pokemons)
         {

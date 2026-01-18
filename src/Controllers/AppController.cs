@@ -1,4 +1,7 @@
-// views y helpers
+/*
+ReadOption()
+HandlerOption(int option)
+*/
 namespace GamePPT_Api
 {
     public class AppController
@@ -16,11 +19,47 @@ namespace GamePPT_Api
             switch (option)
             {
                 case 1:
-                    await NewGame();
+                    var game = await NewGame();
+                    if (game == null) return false;
+
+                    StartBattle(game);
+
+                    // HAS PERDIDO EL COMBATE (tu Pokémon llegó a 0)
+                    if (game.PlayerPokemon.Lives <= 0)
+                    {
+                        game.PlayerLives--;
+
+                        if (game.PlayerLives <= 0)
+                        {
+                            Console.WriteLine("¡GAME OVER!");
+                            PrintWaitForPressKey();
+                            return false;
+                        }
+
+                        Console.WriteLine("Has perdido esta ronda.");
+                        PrintWaitForPressKey();
+                        return false;
+                    }
+
+                    // HAS GANADO EL COMBATE (CPU llegó a 0)
+                    Console.WriteLine("¡Has ganado esta ronda!");
+                    await DeletePokemonById(game.CpuPokemon.Id);
+
+                    SaveGame(game);
+
+                    await ShowRemainingPokemons();
+
+                    PrintWaitForPressKey();
                     break;
+
                 case 2:
-                    // LoadGame();
+                    
+                    var loadedGame = LoadGame();
+                    if (loadedGame == null) return false;
+
+                    StartBattle(loadedGame);
                     break;
+
                 case 0:
                     Console.WriteLine("\nSaliendo del programa...");
                     Environment.Exit(0);

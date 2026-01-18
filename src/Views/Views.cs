@@ -1,12 +1,12 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using static GamePPT_Api.Program;
-using static GamePPT_Api.APIControllers;
-using static GamePPT_Api.Helpers;
+/*
+ShowMainMenu()
+PrintPokemons(List<Pokemon> pokemons)
+PrintBattleStatus(GameState game)
+PrintRoundResult(string result)
+PrintWinner(GameState game)
+PrintError(string message)
+PrintMessage(string message)
+ */
 
 
 
@@ -59,6 +59,23 @@ namespace GamePPT_Api
                 Console.WriteLine(
                     $"{p.Id}. {p.Name} | Tipo: {p.Type} | Vidas: {p.Lives}"
                 );
+            }
+        }
+
+        public static async Task ShowRemainingPokemons()
+        {
+            var pokemons = await GetAllPokemonsAsync();
+
+            if (pokemons == null || pokemons.Count == 0)
+            {
+                Console.WriteLine("No quedan Pokémon por derrotar.");
+                return;
+            }
+
+            Console.WriteLine($"\nPokémon restantes: {pokemons.Count}");
+            for (int i = 0; i < pokemons.Count; i++)
+            {
+                Console.WriteLine($"{i+1}. - {pokemons[i].Name}");
             }
         }
 

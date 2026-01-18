@@ -40,6 +40,29 @@ const server = http.createServer((request, response) => {
         return;
     }
 
+    // endpoint DELETE por ID
+    if (cleanUrl.startsWith("/pokemons/") && request.method === "DELETE") {
+        const id = parseInt(cleanUrl.split("/")[2]);
+
+        const index = pokemons.findIndex(p => p.id === id);
+
+        if (index === -1) {
+            response.statusCode = 404;
+            response.end(JSON.stringify({ error: "Pokemon no encontrado" }));
+            return;
+        }
+
+        const deleted = pokemons.splice(index, 1)[0];
+
+        // guardar cambios en el archivo
+        fs.writeFileSync(filePath, JSON.stringify(pokemons, null, 4));
+
+        response.statusCode = 200;
+        response.end(JSON.stringify(deleted));
+        return;
+    }
+
+
     response.statusCode = 404;
     response.end(JSON.stringify({ error: "Endpoint no encontrado"}));
 });
