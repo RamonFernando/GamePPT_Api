@@ -3,29 +3,6 @@
 Proyecto DAW que combina una **aplicación de consola en C#** con una **API REST en Node.js
 (Express)** para simular un **juego de batallas Pokémon 1 vs 1**.
 
----
-
-## 📁 Estructura del proyecto
-
-``
-GamePPT_Api/
-    ├─ src/
-    │  ├─ api/
-    │  │  ├─ server.js
-    │  │  ├─ package.json
-    │  │  └─ package-lock.json
-    │  ├─ Controllers/
-    │  ├─ Services/
-    │  ├─ Models/
-    │  └─ json/
-    │     ├─ pokemons.json
-    │     ├─ pokemons.backup.json
-    │     └─ savegame.json
-    ├─ .gitignore
-    └─ README.md
-``
-
----
 
 ## ⚙️ Requisitos
 
