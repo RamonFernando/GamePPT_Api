@@ -17,8 +17,8 @@ Proyecto DAW que combina una **aplicación de consola en C#** con una **API REST
 ### 1️⃣ Clonar el repositorio
 
 ```bash
-    git clone <url-del-repositorio>
-    cd GamePPT_Api
+git clone <url-del-repositorio>
+cd GamePPT_Api
 ```
 
 ### 2️⃣ Iniciar la API (Node.js)
@@ -34,7 +34,7 @@ La API se ejecuta en `http://localhost:4000`.
 ### 3️⃣ Ejecutar la aplicación de consola (C#)
 
 ```bash
-    dotnet run
+dotnet run
 ```
 
 ---
