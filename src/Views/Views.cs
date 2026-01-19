@@ -24,6 +24,7 @@ namespace GamePPT_Api
             Console.WriteLine("===========================================");
             Console.WriteLine("1. Nuevo juego");
             Console.WriteLine("2. Cargar juego");
+            Console.WriteLine("3. Ver lista de Pokemons restantes");
             Console.WriteLine("0. Salir");
             Console.WriteLine("**=======================================**");
             Console.Write("Introduce una opcion: ");

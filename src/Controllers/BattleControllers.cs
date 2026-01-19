@@ -12,7 +12,7 @@ namespace GamePPT_Api
 
         public static void StartBattle(GameState game)
         {
-            Console.Clear();
+            // Console.Clear();
             Console.WriteLine("=== COMIENZA LA BATALLA ===\n");
 
             // Bucle de combate: termina cuando alguien llega a 0 vidas
@@ -29,8 +29,7 @@ namespace GamePPT_Api
                 ResolveRound(playerChoice, cpuChoice, game);
 
                 Console.WriteLine($"\nEstado -> {game.PlayerPokemon.Name}: {game.PlayerPokemon.Lives} vidas | {game.CpuPokemon.Name}: {game.CpuPokemon.Lives} vidas");
-                Console.WriteLine("\nPulsa una tecla...");
-                Console.ReadKey();
+                PrintWaitForPressKey();
                 Console.Clear();
             }
 
@@ -41,6 +40,8 @@ namespace GamePPT_Api
                 Console.WriteLine($"Pierdes. Gana {game.CpuPokemon.Name}.");
             else
                 Console.WriteLine($"¡Ganas! {game.PlayerPokemon.Name} vence a {game.CpuPokemon.Name}.");
+            
+            PrintWaitForPressKey();
         }
 
         public static void ResolveRound(string player, string cpu, GameState game)
@@ -113,9 +114,6 @@ namespace GamePPT_Api
         {
             return game.PlayerPokemon.Lives <= 0;
         }
-
-
-
     }
 }
 

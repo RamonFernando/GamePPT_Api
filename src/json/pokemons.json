@@ -1,12 +1,5 @@
 [
     {
-        "id": 1,
-        "name": "Bulbasaur",
-        "type": "Planta",
-        "lives": 4,
-        "hability": "Drenaje natural"
-    },
-    {
         "id": 2,
         "name": "Ivysaur",
         "type": "Planta",

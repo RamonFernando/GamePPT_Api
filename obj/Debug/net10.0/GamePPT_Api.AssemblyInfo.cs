@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GamePPT_Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b8ab712573d13397293443c940414e89530137b6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c4bdde77caf7e5b9eeec96b5c9cf52e4ed1ad213")]
 [assembly: System.Reflection.AssemblyProductAttribute("GamePPT_Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GamePPT_Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

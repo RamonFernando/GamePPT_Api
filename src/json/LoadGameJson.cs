@@ -7,6 +7,7 @@ namespace GamePPT_Api
             if (!File.Exists("src/json/savegame.json"))
             {
                 Console.WriteLine("No hay partida guardada.");
+                PrintWaitForPressKey();
                 return null;
             }
 
@@ -21,13 +22,16 @@ namespace GamePPT_Api
             if (playerPokemon == null)
             {
                 Console.WriteLine("El Pokémon del jugador ya no existe.");
+                PrintWaitForPressKey();
                 return null;
             }
 
+            var cpuPokemon = pokemons[new Random().Next(pokemons.Count)];
             return new GameState
             {
                 PlayerLives = save.PlayerLives,
-                PlayerPokemon = playerPokemon
+                PlayerPokemon = playerPokemon,
+                CpuPokemon = cpuPokemon
             };
         }
     }
