@@ -4,9 +4,19 @@ namespace GamePPT_Api
     {
         public static async Task<List<Pokemon>> GetAllPokemonsAsync()
         {
-            using HttpClient client = new HttpClient();
-            var json = await client.GetStringAsync(Program.BASE_URL);
-            return JsonSerializer.Deserialize<List<Pokemon>>(json) ?? new();
+            try
+            {
+
+                var json = await client.GetStringAsync(BASE_URL);
+
+
+                return JsonSerializer.Deserialize<List<Pokemon>>(json) ?? new();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error cargando pokemons: {ex.Message}");
+                return new();
+            }
         }
 
         public static async Task DeletePokemonById(int id)
@@ -16,6 +26,5 @@ namespace GamePPT_Api
             if (!response)
                 Console.WriteLine("Error eliminando el Pokémon.");
         }
-
     }
 }

@@ -7,7 +7,11 @@ namespace GamePPT_Api
 {
     internal class HttpClientService
     {
-        public static readonly HttpClient client = new HttpClient();
+        public static readonly HttpClient client = new HttpClient
+        {
+            BaseAddress = new Uri("http://localhost:4000"),
+            Timeout = TimeSpan.FromSeconds(10)
+        };
 
         public static HttpClient GetHttpClient() => client;
 
@@ -15,11 +19,15 @@ namespace GamePPT_Api
         {
             try
             {
-                using var client = new HttpClient();
-                client.BaseAddress = new Uri(Program.BASE_URL);
-
                 var response = await client.DeleteAsync(endpoint);
-                return response.IsSuccessStatusCode;
+
+                if (!response.IsSuccessStatusCode)
+                {
+                    Console.WriteLine($"Error DELETE -> {(int)response.StatusCode} {response.ReasonPhrase}");
+                    return false;
+                }
+
+                return true;
             }
             catch (Exception ex)
             {
@@ -27,8 +35,5 @@ namespace GamePPT_Api
                 return false;
             }
         }
-
     }
-
-    
 }

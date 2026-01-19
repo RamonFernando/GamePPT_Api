@@ -26,7 +26,14 @@ namespace GamePPT_Api
                 return null;
             }
 
-            var cpuPokemon = pokemons[new Random().Next(pokemons.Count)];
+            var available = pokemons.Where(p => p.Id != playerPokemon.Id).ToList();
+            if (available.Count == 0)
+            {
+                Console.WriteLine("No hay Pokemon disponible para la CPU.");
+                PrintWaitForPressKey();
+                return null;
+            }
+            var cpuPokemon = available[new Random().Next(available.Count)];
             return new GameState
             {
                 PlayerLives = save.PlayerLives,
@@ -35,5 +42,4 @@ namespace GamePPT_Api
             };
         }
     }
-
 }

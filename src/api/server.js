@@ -1,72 +1,63 @@
-const http = require('http');
-const fs = require('fs');
-const path = require('path');
+const express = require("express");
+const fs = require("fs");
+const path = require("path");
 
-// leer el archivo
-// const filePath = path.join(__dirname, 'pokemons.json');
-const filePath = path.join(__dirname, '..', 'json', 'pokemons.json');
+const app = express();
+app.use(express.json());
 
-const data = fs.readFileSync(filePath, 'utf-8');
-const pokemons = JSON.parse(data);
-
-const server = http.createServer((request, response) => {
-    response.setHeader("Content-Type", "application/json");
-
-    // limpiar caracteres invisibles
-    const cleanUrl = request.url.replace(/\u200B/g, "").trim();
-    console.log("URL recibida:", JSON.stringify(cleanUrl)); // depuración
-
-    // endpoint de lista
-    if ((cleanUrl === "/pokemons" || cleanUrl === "/pokemons/") && request.method === "GET") {
-        response.statusCode = 200;
-        response.end(JSON.stringify(pokemons));
-        return;
-    }
-
-    // endpoint de búsqueda por ID
-    if (cleanUrl.startsWith("/pokemons/") && request.method === "GET") {
-        const id = parseInt(cleanUrl.split("/")[2]);
-
-        const pokemon = pokemons.find(p => p.id === id);
-
-        if (!pokemon) {
-            response.statusCode = 404;
-            response.end(JSON.stringify({ error: "Pokemon no encontrado" }));
-            return;
-        }
-
-        response.statusCode = 200;
-        response.end(JSON.stringify(pokemon));
-        return;
-    }
-
-    // endpoint DELETE por ID
-    if (cleanUrl.startsWith("/pokemons/") && request.method === "DELETE") {
-        const id = parseInt(cleanUrl.split("/")[2]);
-
-        const index = pokemons.findIndex(p => p.id === id);
-
-        if (index === -1) {
-            response.statusCode = 404;
-            response.end(JSON.stringify({ error: "Pokemon no encontrado" }));
-            return;
-        }
-
-        const deleted = pokemons.splice(index, 1)[0];
-
-        // guardar cambios en el archivo
-        fs.writeFileSync(filePath, JSON.stringify(pokemons, null, 4));
-
-        response.statusCode = 200;
-        response.end(JSON.stringify(deleted));
-        return;
-    }
+const DATA_PATH = path.join(__dirname, "../json/pokemons.json");
+const BACKUP_PATH = path.join(__dirname, "../json/pokemons.backup.json");
 
 
-    response.statusCode = 404;
-    response.end(JSON.stringify({ error: "Endpoint no encontrado"}));
+// UTILIDADES
+function loadPokemons() {
+    return JSON.parse(fs.readFileSync(DATA_PATH, "utf8"));
+}
+
+function savePokemons(data) {
+    fs.writeFileSync(DATA_PATH, JSON.stringify(data, null, 2));
+}
+
+
+//  NUEVO: RESTAURAR DESDE BACKUP
+function restoreFromBackup() {
+    const backup = JSON.parse(fs.readFileSync(BACKUP_PATH, "utf8"));
+    savePokemons(backup);
+    console.log("Pokemons restaurados desde backup");
+}
+
+
+// ENDPOINTS
+
+// GET todos
+app.get("/pokemons", (req, res) => {
+    res.json(loadPokemons());
 });
 
-server.listen(4000, () => {
-    console.log("Servidor escuchando en http://localhost:4000/pokemons");
+// DELETE por id
+app.delete("/pokemons/:id", (req, res) => {
+    const id = parseInt(req.params.id);
+    let pokemons = loadPokemons();
+
+    const index = pokemons.findIndex(p => p.id === id);
+    if (index === -1) {
+        return res.status(404).json({ message: "Pokemon no encontrado" });
+    }
+
+    pokemons.splice(index, 1);
+    savePokemons(pokemons);
+
+    res.json({ message: "Pokemon eliminado" });
+});
+
+//  NUEVO ENDPOINT: RESET GAME
+app.post("/reset", (req, res) => {
+    restoreFromBackup();
+    res.json({ message: "Juego reiniciado correctamente" });
+});
+
+
+//  SERVER START
+app.listen(4000, () => {
+    console.log("API Pokemon corriendo en http://localhost:4000");
 });
